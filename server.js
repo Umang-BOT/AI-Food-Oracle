@@ -14,9 +14,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/posts", postRoute);
-app.use(express.static(path.join(__dirname, "./Frontend/blog_front/build")));
+app.use(express.static(path.join(__dirname, "./Frontend/build")));
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./Frontend/blog_front/build/index.html"));
+  res.sendFile(path.join(__dirname, "./Frontend/build/index.html"));
 });
 //Error handler
 app.use(err_han);
